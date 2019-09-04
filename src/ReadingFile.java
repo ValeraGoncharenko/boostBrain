@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Класс ReadingFile считывает файл в ArrayList.
+ * РљР»Р°СЃСЃ ReadingFile СЃС‡РёС‚С‹РІР°РµС‚ С„Р°Р№Р» РІ ArrayList.
  * @author Valera Goncharenko (goncharikvv@gmail.com).
  * @version $Id$.
  * @since 3.09.2019.
@@ -38,7 +38,7 @@ class ReadingFile {
 
         for (int i = 0; i < dataFromFile.size(); i++) {
 
-            if(dataFromFile.get(i).contains("\"Брянская область\"")){
+            if(dataFromFile.get(i).contains("\"Р‘СЂСЏРЅСЃРєР°СЏ РѕР±Р»Р°СЃС‚СЊ\"")){
                 csvFileDataOut = dataFromFile.get(i);
                 for (int j = 1; j < csvFileDataOut.size(); j++) {
                     double number = Double.parseDouble(csvFileDataOut.get(j).replaceAll("\"", ""));
@@ -50,7 +50,7 @@ class ReadingFile {
 
         for (int i = 0; i < dataFromFile.size(); i++) {
 
-            if(dataFromFile.get(i).contains("\"Белгородская область\"")){
+            if(dataFromFile.get(i).contains("\"Р‘РµР»РіРѕСЂРѕРґСЃРєР°СЏ РѕР±Р»Р°СЃС‚СЊ\"")){
                 csvFileDataOut = dataFromFile.get(i);
                 for (int j = 1; j < csvFileDataOut.size(); j++) {
                     double number = Double.parseDouble(csvFileDataOut.get(j).replaceAll("\"", ""));
@@ -62,11 +62,11 @@ class ReadingFile {
         if(sum1 > sum2){
             result = (sum1 - sum2) / sum2 * 100;
 
-            System.out.println(" В Белгородской области больше ДТП чем в Брянской на " + result + " %");
+            System.out.println(" Р’ Р‘РµР»РіРѕСЂРѕРґСЃРєРѕР№ РѕР±Р»Р°СЃС‚Рё Р±РѕР»СЊС€Рµ Р”РўРџ С‡РµРј РІ Р‘СЂСЏРЅСЃРєРѕР№ РЅР° " + result + " %");
         }
         else {
             result = (sum2 - sum1) / sum1 * 100;
-            System.out.println(" В Брянской области больше ДТП чем в Белгородской на " + result+ " %");
+            System.out.println(" Р’ Р‘СЂСЏРЅСЃРєРѕР№ РѕР±Р»Р°СЃС‚Рё Р±РѕР»СЊС€Рµ Р”РўРџ С‡РµРј РІ Р‘РµР»РіРѕСЂРѕРґСЃРєРѕР№ РЅР° " + result+ " %");
         }
 
         return result;
